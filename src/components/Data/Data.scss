@@ -1,0 +1,73 @@
+$form-color-primary: #30c742; // New primary green color
+$form-color-secondary: #2bb03e; // Slightly darker shade of green for hover effects
+$input-border-color: #d1d5db;
+$error-color: #ef4444;
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 60px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2, h3 {
+    color: $form-color-primary;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .error-message {
+    color: $error-color;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   padding-bottom: 60px;
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $form-color-primary;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+          border-color: $form-color-primary;
+          box-shadow: 0 0 5px rgba(56, 229, 77, 0.3);
+        }
+      }
+    }
+
+    .submit-btn {
+      padding: 10px 15px;
+      background-color: $form-color-primary;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $form-color-secondary;
+      }
+    }
+  }
+}
