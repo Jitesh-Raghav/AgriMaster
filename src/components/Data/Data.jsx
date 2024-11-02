@@ -71,8 +71,11 @@ const DataForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Location Data:", locationData);
+    console.log("Soil Data:", soilData);
     alert('Crop suggestion generated!');
-  };
+};
+
 
   return (
     <div className="form-container">
